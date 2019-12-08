@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".UserMainActivity">
+
+    <LinearLayout
+        android:id="@+id/UserMain_ll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/User_MainimageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/UserMain_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textSize="30sp"
+            app:fontFamily="sans-serif-smallcaps"
+            android:text="USER HOME" />
+
+        <Button
+            android:id="@+id/UserMain_bt_View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="VIEW POSTED JOBS" />
+
+        <Button
+            android:id="@+id/UserMain_bt_ViewApplied"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VIEW APPLIED JOBS" />
+
+        <Button
+            android:id="@+id/UserMain_bt_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="START CHAT" />
+
+        <Button
+            android:id="@+id/UserMain_bt_changepwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHANGE PASSWORD" />
+
+        <Button
+            android:id="@+id/UserMain_bt_logout"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOGOUT" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

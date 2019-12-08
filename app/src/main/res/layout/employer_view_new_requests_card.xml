@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="30dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/emp_new_request_cl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="50dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/emplr_jobs_desc"
+            app:layout_constraintStart_toStartOf="@+id/emplr_jobs_desc">
+
+            <TextView
+                android:id="@+id/emp_new_request_textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="21dp"
+                android:text="JOB TITLE"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/emp_new_request_textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="11dp"
+                android:text="PAY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_textView2" />
+
+            <TextView
+                android:id="@+id/emp_new_request_textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="APPOINTMENT DATE"
+                app:layout_constraintBaseline_toBaselineOf="@+id/emp_new_request_jobs_date"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/emp_new_request_textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="APPOINTMENT TIME"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_textView4" />
+
+            <TextView
+                android:id="@+id/emp_new_request_textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="17dp"
+                android:text="DESCRIPTION"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_textView5" />
+
+            <TextView
+                android:id="@+id/emp_new_request_jobs_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/emp_new_request_jobs_title"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_jobs_title" />
+
+            <TextView
+                android:id="@+id/emp_new_request_jobs_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="21dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/emp_new_request_textView4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/emp_new_request_jobs_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/emp_new_request_jobs_pay"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_jobs_pay" />
+
+            <TextView
+                android:id="@+id/emp_new_request_jobs_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="14dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/emp_new_request_jobs_date"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_jobs_date" />
+
+            <TextView
+                android:id="@+id/emp_new_request_jobs_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="21dp"
+                android:text="TextView"
+                app:layout_constraintStart_toStartOf="@+id/emp_new_request_jobs_time"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_jobs_time" />
+
+            <TextView
+                android:id="@+id/emp_new_request_textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="46dp"
+                android:layout_marginRight="46dp"
+                android:text="USER NAME"
+                app:layout_constraintEnd_toStartOf="@+id/emp_new_request_jobs_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_textView6" />
+
+            <TextView
+                android:id="@+id/emp_new_request_jobs_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="76dp"
+                android:layout_marginLeft="76dp"
+                android:layout_marginTop="16dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/emp_new_request_textView7"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_jobs_desc" />
+
+            <TextView
+                android:id="@+id/emp_new_request_textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="17dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="18dp"
+                android:text="USER EMAIL"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_textView7" />
+
+            <TextView
+                android:id="@+id/emp_new_request_jobs_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="20dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/emp_new_request_textView9"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_jobs_name" />
+
+            <TextView
+                android:id="@+id/emp_new_request_textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="16dp"
+                android:text="CONTACT NUMBER"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_textView9" />
+
+            <TextView
+                android:id="@+id/emp_new_request_jobs_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="21dp"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/emp_new_request_textView11"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_jobs_email" />
+
+            <Button
+                android:id="@+id/emp_new_request_jobs_btn_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="ACCEPT"
+                app:layout_constraintEnd_toStartOf="@+id/emp_new_request_jobs_btn_reject"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emp_new_request_jobs_contact" />
+
+            <Button
+                android:id="@+id/emp_new_request_jobs_btn_reject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REJECT"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/emp_new_request_jobs_btn_accept" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

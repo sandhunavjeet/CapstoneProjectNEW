@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingBottom="20dp"
+android:paddingLeft="16dp"
+android:paddingRight="16dp"
+android:paddingTop="16dp"
+android:background="#FFFFFF"
+tools:context=".EmplrChangePwd"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/emplr_change_pwd_imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_weight="0"
+        app:srcCompat="@drawable/register" />
+
+    <TextView
+        android:id="@+id/emplr_change_pwd_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="USER RESET PASSWORD"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/emplr_change_et_newpwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="New Password"
+        android:inputType="textPassword"
+        />
+
+    <EditText
+        android:id="@+id/emplr_change_et_oldpwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Old Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/emplr_change_btnReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RESET PASSWORD" />
+
+</LinearLayout>
+
+</RelativeLayout>

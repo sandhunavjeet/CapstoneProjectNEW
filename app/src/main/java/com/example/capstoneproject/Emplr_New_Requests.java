@@ -1,6 +1,5 @@
 package com.example.capstoneproject;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -25,7 +24,7 @@ public class Emplr_New_Requests extends AppCompatActivity {
     RecyclerView rv;
     private List<AppliedJob> newRequestList;
     NewRequestEmployeeAdapter pja;
-    ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,14 +36,7 @@ public class Emplr_New_Requests extends AppCompatActivity {
                 getReference("ApplyJobs").orderByChild("cmpid").equalTo(cid);;
         newRequestList=new ArrayList<>();
 
-        progressDialog=new ProgressDialog(this);
-        progressDialog.setTitle("WAIT");
-        progressDialog.setMessage("Please wait while we are getting new requests");
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressDialog.setProgress(0);
-        progressDialog.setCanceledOnTouchOutside(false);
-        progressDialog.setCancelable(true);
-        progressDialog.show();
+
 
         rv = findViewById(R.id.emplr_recycler_new_requests);
         newRequestList.clear();
@@ -66,13 +58,12 @@ public class Emplr_New_Requests extends AppCompatActivity {
                 Collections.reverse(newRequestList);
                 pja=new NewRequestEmployeeAdapter(Emplr_New_Requests.this,newRequestList);
                 rv.setLayoutManager(new LinearLayoutManager(Emplr_New_Requests.this));
-                progressDialog.dismiss();
                 rv.setAdapter(pja);
                 pja.notifyDataSetChanged();
             }
             else
             {
-                progressDialog.dismiss();
+
             }
         }
         @Override

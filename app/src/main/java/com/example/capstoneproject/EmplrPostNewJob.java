@@ -1,7 +1,7 @@
 package com.example.capstoneproject;
 
 import android.app.DatePickerDialog;
-import android.app.ProgressDialog;
+
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,7 +36,6 @@ public class EmplrPostNewJob extends AppCompatActivity {
     DatabaseReference databaseJobs;
     String cmpid,cmpname;
 
-    ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,13 +61,6 @@ public class EmplrPostNewJob extends AppCompatActivity {
         getname = FirebaseDatabase.getInstance().getReference("Employers").orderByChild("cmpid").equalTo(cmpid);
         getname.addListenerForSingleValueEvent(valueEventListener);
 
-        progressDialog=new ProgressDialog(this);
-        progressDialog.setTitle("WELCOME");
-        progressDialog.setMessage("Please wait posting....");
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressDialog.setProgress(0);
-        progressDialog.setCanceledOnTouchOutside(false);
-        progressDialog.setCancelable(false);
 
         et_date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -153,10 +145,10 @@ public class EmplrPostNewJob extends AppCompatActivity {
                 }
                 else
                 {
-                    progressDialog.show();
+
                     Job jobobj = new Job(jid,cmpid,cmpname,title,pay,dt,tm,desc);
                     databaseJobs.child(jid).setValue(jobobj);
-                    progressDialog.dismiss();
+
                     Toast.makeText(EmplrPostNewJob.this,"Job Posted Successfully",Toast.LENGTH_LONG).show();
                     Intent i = new Intent(EmplrPostNewJob.this, EmployerMainActivity.class);
                     startActivity(i);

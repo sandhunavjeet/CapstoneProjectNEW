@@ -1,6 +1,6 @@
 package com.example.capstoneproject;
 
-import android.app.ProgressDialog;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -25,7 +25,7 @@ public class Emplr_ViewPostedJobs extends AppCompatActivity {
     RecyclerView rv;
     private List<Job> jobList;
     PostedJobAdapter pja;
-    ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,14 +35,6 @@ public class Emplr_ViewPostedJobs extends AppCompatActivity {
         dbjobs = FirebaseDatabase.getInstance().getReference("Jobs").orderByChild("cmpid").equalTo(cmpid);
         jobList=new ArrayList<>();
 
-        progressDialog=new ProgressDialog(this);
-        progressDialog.setTitle("WAIT");
-        progressDialog.setMessage("Please wait while we are getting posted jobs records");
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressDialog.setProgress(0);
-        progressDialog.setCanceledOnTouchOutside(false);
-        progressDialog.setCancelable(true);
-        progressDialog.show();
 
         rv = findViewById(R.id.Emplr_recyclerViewJobs);
 
@@ -62,13 +54,13 @@ public class Emplr_ViewPostedJobs extends AppCompatActivity {
                 Collections.reverse(jobList);
                 pja=new PostedJobAdapter(Emplr_ViewPostedJobs.this,jobList);
                 rv.setLayoutManager(new LinearLayoutManager(Emplr_ViewPostedJobs.this));
-                progressDialog.dismiss();
+
                 rv.setAdapter(pja);
                 pja.notifyDataSetChanged();
             }
             else
             {
-                progressDialog.dismiss();
+
             }
 
         }

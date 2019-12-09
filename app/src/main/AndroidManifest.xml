@@ -16,6 +16,7 @@
         <activity android:name=".EmplrPostNewJob" />
         <activity android:name=".UserChangePwd" />
         <activity android:name=".UserChat" />
+        <activity android:name=".chatActivity" />
         <activity android:name=".UserViewJobApply" />
         <activity android:name=".UserViewPostedJobs" />
         <activity android:name=".EmployerMainActivity" />

@@ -1,6 +1,6 @@
 package com.example.capstoneproject;
 
-import android.app.ProgressDialog;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -26,7 +26,7 @@ public class UserViewJobApply extends AppCompatActivity {
     RecyclerView rv;
     private List<AppliedJob> applyjobList;
     AppliedJobUserAdapter pja;
-    ProgressDialog progressDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,14 +40,7 @@ public class UserViewJobApply extends AppCompatActivity {
                 .orderByChild("userid").equalTo(uid);;
         applyjobList=new ArrayList<>();
 
-        progressDialog=new ProgressDialog(this);
-        progressDialog.setTitle("WAIT");
-        progressDialog.setMessage("Please wait while we are getting all applied jobs records");
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressDialog.setProgress(0);
-        progressDialog.setCanceledOnTouchOutside(false);
-        progressDialog.setCancelable(true);
-        progressDialog.show();
+
 
         rv = findViewById(R.id.User_recyclerViewApplyJobs);
 
@@ -66,13 +59,13 @@ public class UserViewJobApply extends AppCompatActivity {
                 Collections.reverse(applyjobList);
                 pja=new AppliedJobUserAdapter(UserViewJobApply.this,applyjobList);
                 rv.setLayoutManager(new LinearLayoutManager(UserViewJobApply.this));
-                progressDialog.dismiss();
+
                 rv.setAdapter(pja);
                 pja.notifyDataSetChanged();
             }
             else
             {
-                progressDialog.dismiss();
+
             }
         }
         @Override

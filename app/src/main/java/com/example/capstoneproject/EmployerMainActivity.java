@@ -57,6 +57,8 @@ public class EmployerMainActivity extends AppCompatActivity {
         btnchangepwd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(EmployerMainActivity.this, EmplrChangePwd.class);
+                startActivity(i);
 
             }
         });

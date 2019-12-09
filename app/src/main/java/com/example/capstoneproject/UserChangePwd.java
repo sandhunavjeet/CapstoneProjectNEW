@@ -1,6 +1,6 @@
 package com.example.capstoneproject;
 
-import android.app.ProgressDialog;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -47,9 +47,7 @@ public class UserChangePwd extends AppCompatActivity {
                     final String email = user.getEmail();
                     AuthCredential credential = EmailAuthProvider.getCredential(email,oldpwd);
 
-                    final ProgressDialog progressDialog = new ProgressDialog(UserChangePwd.this);
-                    progressDialog.setMessage("Verifying..");
-                    progressDialog.show();
+
 
                     user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -59,10 +57,10 @@ public class UserChangePwd extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if(!task.isSuccessful()){
-                                            progressDialog.dismiss();
+
                                             Toast.makeText(UserChangePwd.this, "Something went wrong. Please try again later", Toast.LENGTH_LONG).show();
                                         }else {
-                                            progressDialog.dismiss();
+
                                             Toast.makeText(UserChangePwd.this, "Password Modified Successfully, Login with new Password", Toast.LENGTH_LONG).show();
                                             FirebaseAuth.getInstance().signOut();
                                             Intent i = new Intent(UserChangePwd.this, UserLoginActivity.class);                                             //
@@ -71,7 +69,7 @@ public class UserChangePwd extends AppCompatActivity {
                                     }
                                 });
                             }else {
-                                progressDialog.dismiss();
+
                                 Toast.makeText(UserChangePwd.this, "Authentication Failed", Toast.LENGTH_LONG).show();
                             }
                         }

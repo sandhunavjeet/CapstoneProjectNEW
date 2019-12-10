@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.firebase.auth.FirebaseAuth;
-
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class EmployerMainActivity extends AppCompatActivity {
 
@@ -41,6 +41,14 @@ public class EmployerMainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        btnrequests.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(EmployerMainActivity.this,
+                        Emplr_New_Requests.class);
+                startActivity(i);
+            }
+        });
 
         btnlogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,10 +74,11 @@ public class EmployerMainActivity extends AppCompatActivity {
         btnrequests.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(EmployerMainActivity.this,
+                        Emplr_New_Requests.class);
+                startActivity(i);
             }
         });
-
     }
     public void onBackPressed() {
         super.onBackPressed();

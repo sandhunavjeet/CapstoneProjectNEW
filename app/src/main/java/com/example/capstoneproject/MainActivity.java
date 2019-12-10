@@ -2,8 +2,6 @@ package com.example.capstoneproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -11,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private MenuItem item;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        @Override
+        /*@Override
         public boolean onCreateOptionsMenu(Menu menu) {
             // Inflate the menu; this adds items to the action bar if it is present.
             getMenuInflater().inflate(R.menu.home, menu);
@@ -65,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             // Handle navigation view item clicks here.
             int id = item.getItemId();
 
-            /*if (id == R.id.nav_location) {
+            if (id == R.id.nav_location) {
                 //Intent profileIntent = new Intent(MainActivity.this,locActivity.class);
                 startActivity(profileIntent);
 
@@ -77,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (id == R.id.nav_msg) {
                 Intent profileIntent = new Intent(MainActivity.this,messageActivity.class);
                 profileIntent.putExtra("name",name);
-                startActivity(profileIntent);*/
+                startActivity(profileIntent);
 
             }else if (id == R.id.nav_support) {
                 Intent profileIntent = new Intent(MainActivity.this,supportActivity.class);
@@ -89,13 +87,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent loginIntent = new Intent(MainActivity.this,MainActivity.class);
                 startActivity(loginIntent);
 
-            }
+            }*/
 
 
         }
 
     }
-
-}
-}
 

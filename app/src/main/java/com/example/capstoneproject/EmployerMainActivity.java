@@ -66,9 +66,7 @@ public class EmployerMainActivity extends AppCompatActivity {
         btnrequests.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(EmployerMainActivity.this,
-                        Emplr_New_Requests.class);
-                startActivity(i);
+
             }
         });
 

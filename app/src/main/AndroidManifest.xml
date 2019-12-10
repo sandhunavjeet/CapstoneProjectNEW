@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.capstoneproject">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +20,7 @@
             android:name=".Emplr_ViewPostedJobs" />
         <activity android:name=".EmplrPostNewJob" />
         <activity android:name=".UserChangePwd" />
+        <activity android:name=".optionActivity" />
         <activity android:name=".UserChat" />
         <activity android:name=".chatActivity" />
         <activity android:name=".UserViewJobApply" />
@@ -32,6 +38,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBYV8PjAvSSFJiIyeFNVXjiSP_f4P8ITKw" />
+
+        <activity android:name=".supportActivity"></activity>
     </application>
 
 </manifest>
